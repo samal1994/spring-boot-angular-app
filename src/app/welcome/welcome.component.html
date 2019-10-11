@@ -1,0 +1,23 @@
+<div class = "main"> 
+    <marquee class="marq" bgcolor = "Green" direction = "left" loop="" > 
+        <div class="geek1">Welcome {{username}} You are sucessfully loggedIn</div> 
+    </marquee> 
+    </div> 
+<p>
+  welcome {{name}}!   Navigate to Edit page <a routerLink ="/todos" >here</a>
+</p>
+<div>Click Here To Make a service call</div> <br>
+
+<button (click)=getValue()>Click Here</button> <br>
+<div *ngIf ="data">
+  {{data.name}} , {{data.emailAddress}} ,{{data.rollNum}}
+</div>
+<div *ngIf ="apiresponse">
+<h1>Server side Error</h1>
+{{apiresponse}}
+</div>
+
+<button (click)=getPathValue()>Get PathVar</button>
+<div *ngIf ="pathData">
+  {{pathData.name}} , {{pathData.emailAddress}} ,{{pathData.rollNum}}
+</div>
